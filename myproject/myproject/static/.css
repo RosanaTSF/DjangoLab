@@ -1,0 +1,12 @@
+body {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #ff69b4; /* Letras rosas */
+}
+
+h1, h2, h3, h4, h5, h6, p, label, a {
+    color: #ff69b4; /* Letras rosas */
+}
+
+.form-label {
+    color: #ff69b4; /* Letras rosas para labels */
+}
