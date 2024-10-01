@@ -10,6 +10,9 @@ STATIC_URL = '/static/'
 # Diretórios onde o Django irá procurar por arquivos estáticos
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
+# Diretório onde os arquivos estáticos serão coletados
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # Configuração para arquivos de mídia, se aplicável
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
@@ -18,7 +21,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 SECRET_KEY = '89e5i$7_=tyal_d4e%c+-*hl(op89*l_*mfmuqx!di*qv-t%0r'
 
 # Debug
-DEBUG = False
+DEBUG = True
 
 # Hosts permitidos
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
@@ -42,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap5',
+    'django_bootstrap5',
     'womakers',
 ]
 
@@ -76,3 +79,12 @@ TEMPLATES = [
 
 # Configuração do WSGI
 WSGI_APPLICATION = 'myproject.wsgi.application'
+
+# settings.py
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+    }
+}
