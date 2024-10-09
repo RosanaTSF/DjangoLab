@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_bootstrap5',
     'womakers',
+    'rest_framework',
 ]
 
 # Middleware
