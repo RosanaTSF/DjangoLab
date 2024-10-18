@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head>
+    {% load static %}
+    <script src="{% static 'assets/js/color-modes.js' %}"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,8 +87,8 @@
       }
     </style>
 
-    <link href="/static/starter-template.css" rel="stylesheet">
-    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'starter-template.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
 
   </head>
   <body>
@@ -158,7 +160,7 @@
     <p class="fs-5 col-md-8">Choice your hero</p>
 
     <div class="mb-5">
-      <a href="cadastro" class="btn btn-primary btn-lg px-4">Register</a>
+      <a href="{% url 'cadastro' %}" class="btn btn-primary btn-lg px-4">Register</a>
     </div>
 
     <hr class="col-3 col-md-2 mb-5">
@@ -170,7 +172,7 @@
 </div>
 
 
-  <script src="/static/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
 
       
   </body>
